@@ -1,0 +1,78 @@
+<view>
+  <view class="detailBox">
+    <view class="detail_bg">
+      <image src="{{ moveItem.img }}"></image>
+    </view>
+    <view class="detail_top">
+      <view class="de_top_img">
+        <image src="{{ moveItem.img }}"></image>
+      </view>
+      <view class="de_top_content">
+        <view class="de_top_content_title line-ellipsis">{{moveItem.nm}}</view>
+        <view class="de_top_content_en line-ellipsis">The Eight Hundred</view>
+        <view class="de_top_content_score line-ellipsis">
+          <span>8.4</span>
+          <span>(128.4万人评)</span>
+        </view>
+        <view class="de_top_content_type line-ellipsis">
+          <span>剧情,战争,历史</span>
+        </view>
+        <view class="de_top_content_pubDesc line-ellipsis">2020-08-21 09:00中国大陆上映</view>
+      </view>
+      <view class="de_top_right">
+        <text class="iconfont icon-right" bindtap="intrInfo"></text>
+      </view>
+    </view>
+    <view class="detail_narWrap">
+      <view class="de_nar_tab">
+        <view class="de_nar_tab_item">
+          全城
+          <span></span>
+        </view>
+        <view class="de_nar_tab_item">
+          品牌
+          <span></span>
+        </view>
+        <view class="de_nar_tab_item">
+          特色
+          <span></span>
+        </view>
+      </view>
+    </view>
+    <view class="detail_cinema">
+      <view class="detail_cinema_item" wx:for="{{ cinameS }}" wx:key="index" bindtap="toCiname" data-index="{{item.name}}">
+        <view class="de_ci_item_title">
+          <view class="title line-ellipsis">
+            <span>{{item.name}}</span>
+            <span class="price-block">
+              <span class="price">{{item.lowPrice}}</span><span class="q">元起</span>
+            </span>
+          </view>
+          <view class="box-flex">
+            <span>{{item.address}}</span>
+            <span class="distance">1.6km</span>
+          </view>
+          <view class="label-block">
+            <span class="allowRefund">退</span>
+            <span class="endorse">改签</span>
+            <span class="endorse">折扣卡</span>
+          </view>
+          <view class="discount-block">
+            <image src="../../assets/img/ka.png"></image>
+            <span>
+              <span class="discount-label-text">开卡特惠，首单1张最高立减2元</span>
+            </span>
+          </view>
+        </view>
+        <view class="de_ci_item_timeS">
+          <view class="min-show-block">
+            <span>近期场次：</span>
+            <span class="time-line">16:00 </span>
+            <span class="time-line"> 17:00 </span>
+            <span class="time-line"> 18:00</span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

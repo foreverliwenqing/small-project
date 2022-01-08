@@ -1,0 +1,90 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="headerBox">
+		<view class="city" bindtap="onShowCity">
+			<text>{{localCity}}</text>
+			<text class="iconfont icon-daosanjiao"></text>
+		</view>
+
+		<block class wx:for="{{tabs}}" wx:key="key" wx:item="item" wx:index="index">
+			<view class='{{ currentData == index ? "active" : "" }}' bindtap="choose" data-index="{{index}}">{{item}}</view>
+		</block>
+		<view class="searchIcon">
+			<text class="iconfont icon-sousuo" bindtap="onSearch"> </text>
+		</view>
+	</view>
+	<view hidden="{{ currentData != 0 }}" class="itemContent">
+		<view class="listItem" wx:for="{{listS}}" wx:key="index">
+			<image class="proImg" src="{{item.img}}"></image>
+			<view class="move">
+				<view class="moveContent">
+					<view class="itemName">{{item.nm}}
+						<span class="imax">
+							<image src="../../assets/img/2d.png"></image>
+						</span>
+					</view>
+					<view wx:if="{{item.sc}}">
+						<view class="start">观众评 <span class="grade">{{item.sc}}</span> </view>
+					</view>
+					<view wx:if="{{!item.sc}}">
+						<view class="start"> <span class="grade">{{item.wish}}</span>人想看</view>
+					</view>
+					<view style="margin-top: 10px;">
+						<view class="start">主演:
+							<span>{{item.star}},</span>
+						</view>
+						<view class="moveType">
+							<span>{{item.category}}</span>
+						</view>
+					</view>
+					<view style="font-size: 13px; color: #666;">{{item.showInfo}}</view>
+				</view>
+				<view class="button-block">
+					<view class="btn normal" wx:if="{{item.sc}}">
+						<span class="fix" bindtap="buyTic" data-index="{{item.id}}">购票</span>
+					</view>
+					<view class="preSale normal" wx:if="{{!item.sc}}">
+						<span class="fix" bindtap="buyTic" data-index="{{item.id}}">预购</span>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view hidden="{{ currentData != 1 }}" class="itemContent">
+		<view class="listItem" wx:for="{{listS}}" wx:key="index">
+			<image class="proImg" src="{{item.img}}"></image>
+			<view class="move">
+				<view class="moveContent">
+					<view class="itemName">{{item.nm}}
+						<span class="imax">
+							<image src="../../assets/img/2d.png"></image>
+						</span>
+					</view>
+					<view wx:if="{{item.sc}}">
+						<view class="start">观众评 <span class="grade">{{item.sc}}</span> </view>
+					</view>
+					<view wx:if="{{!item.sc}}">
+						<view class="start"> <span class="grade">{{item.wish}}</span>人想看</view>
+					</view>
+					<view style="margin-top: 10px;">
+						<view class="start">主演:
+							<span>{{item.star}},</span>
+						</view>
+						<view class="moveType">
+							<span>{{item.category}}</span>
+						</view>
+					</view>
+					<view style="font-size: 13px; color: #666;">{{item.showInfo}}</view>
+				</view>
+				<view class="button-block">
+					<view class="btn normal" wx:if="{{item.sc}}">
+						<span class="fix" bindtap="buyTic" data-index="{{item.filmId}}">购票</span>
+					</view>
+					<view class="preSale normal" wx:if="{{!item.sc}}">
+						<span class="fix" bindtap="buyTic" data-index="{{item.filmId}}">预购</span>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

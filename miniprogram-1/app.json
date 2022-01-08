@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/history/history",
+    "pages/swipe/swipe",
+    "pages/my/my",
+    "pages/sou/sou"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3197ed",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  
+  "tabBar": {
+    "color": "#353535",
+    "selectedColor": "#d81e06",
+    "borderStyle": "black",
+    "backgroundColor": "##3197ed",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "扫一扫",
+        "iconPath": "./assets/sao.png",
+        "selectedIconPath": "./assets/acsao.png"
+      },
+      {
+        "pagePath": "pages/sou/sou",
+        "text": "货架搜索",
+        "iconPath": "./assets/sou.png",
+        "selectedIconPath": "./assets/acsou.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "记录",
+        "iconPath": "./assets/history.png",
+        "selectedIconPath": "./assets/achistory.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

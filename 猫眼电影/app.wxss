@@ -1,0 +1,36 @@
+@import "./iconfont/index.wxss";
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+.clear {
+  overflow: hidden;
+  clear: both;
+  display: block;
+}
+.wx_line {
+  height: 20rpx;
+  background-color: #f7f8fa;
+}
+.cleee {
+  background-color: #f4f4f4;
+}
+.blur {
+  height: 1px;
+  margin-right: -1px;
+  background: #223b5f;
+  border-radius: .3rem;
+  opacity: .2;
+  filter: blur(.1rem);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+#clred {
+  color: #fa7298;
+}

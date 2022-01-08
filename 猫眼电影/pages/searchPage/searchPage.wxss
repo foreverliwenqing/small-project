@@ -1,0 +1,249 @@
+/* pages/searchPage/searchPage.wxss */
+
+view.search {
+  display: flex;
+  flex-direction: row;
+  height: 98rpx;
+  background: #efeff4;
+  align-items: center;
+}
+
+view.searchItem {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  flex-direction: row;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+
+view.searchItem .icon-sousuo {
+  height: 40rpx;
+  width: 40rpx;
+  align-self: center;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+view.searchItem input {
+  flex: 1;
+  font-size: 30rpx;
+  height: 65rpx
+}
+
+.search span {
+  width: 4rem;
+  line-height: 30px;
+  padding: 0 2px;
+  font-size: 16px;
+  color: #f03d37;
+}
+
+
+.listItem {
+  width: 100vw;
+  position: relative;
+  background-image: red;
+  box-sizing: content-box;
+  background-color: white;
+  display: flex;
+  border-bottom: 3rpx solid #eee;
+}
+
+.listItem .proImg {
+  width: 67px;
+  height: 90px;
+  padding: 15px 0 0 15px;
+}
+
+.itemContent {
+  background-color: #f5f5f5;
+  margin-top: 100rpx;
+}
+
+.move {
+  padding: 15px 10px 15px 5px;
+  width: calc(100vw - 85px)
+}
+
+.imax image {
+  width: 43px;
+  height: 14px;
+  margin-bottom: 6px;
+}
+
+.start {
+  font-size: 13px;
+  color: #666;
+  width: calc(100vw - 150px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.moveContent {
+  width: 80%;
+  float: left
+}
+
+.moveType {
+  color: #666;
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+.itemName {
+  margin-bottom: 7px;
+  font-size: 17px;
+  color: #333;
+  font-weight: 700;
+}
+
+.moveTitle {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 320rpx;
+  display: inline-block;
+}
+
+.grade {
+  color: #fa0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.gradeTitle {
+  font-size: 14px;
+  color: #fa0;
+}
+
+.classify {
+  font-size: 15px;
+  color: #999;
+  padding: 9px 15px;
+  width: 100%;
+  border-bottom: 3rpx solid #eee;
+}
+
+.more-result {
+  font-size: 15px;
+  color: #ef4238;
+  line-height: 44px;
+  height: 44px;
+  text-align: center;
+}
+
+.moveS {
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.cinamesList {
+  padding-left: 15px;
+}
+
+.addressName {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 70%;
+  display: inline-block;
+}
+
+.namePrice {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.address {
+  font-size: 13px;
+  color: #999;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.price {
+  font-size: 17px;
+  color: #ef4238;
+}
+
+.sell-price {
+  margin-left: 10px;
+}
+
+.info {
+  padding: 15px 5px 15px 0;
+  width: 85%;
+}
+
+.cinameItem {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.feature-tags span {
+  border: 1px solid #589daf;
+  color: #589daf;
+  display: inline-block;
+  padding: 0 3px;
+  height: 15px;
+  line-height: 15px;
+  border-radius: 2px;
+  margin-right: 7px;
+  font-size: 12px
+}
+
+.distance {
+  font-size: 13px;
+  color: #999;
+}
+
+.history-item {
+  margin-left: 15px;
+  line-height: 44px;
+  border-bottom: 1px solid #eee;
+}
+
+.icon-shijian1 {
+  margin-right: 10px;
+}
+
+.icon-cuowu {
+  float: right;
+  padding: 0 15px;
+  font-size: 18px;
+}
+
+.search-history {
+  position: absolute;
+  top: 98rpx;
+  width: 100%;
+}
+
+.blank {
+  height: calc(100vh - 98px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #dedede;
+  font-size: 12px;
+}
+.blank span {
+  margin-left: 10px;
+}
+.blank image {
+  width: 45px;
+  height: 45px;
+}
+.clearHistory {
+  text-align: center;
+  padding: 10px;
+  color: #ef4238;
+  background: #eee;
+}

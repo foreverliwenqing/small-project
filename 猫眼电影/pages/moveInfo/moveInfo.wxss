@@ -1,0 +1,194 @@
+.line-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.detailBox .detail_top {
+  height: 150px;
+  padding: 19px 30px 19px 15px;
+  display: flex;
+  color: white;
+}
+
+.detailBox .detail_bg {
+  width: 100%;
+  height: 188px;
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  -webkit-filter: blur(1.2rem);
+  filter: blur(1.2rem);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #333;
+}
+
+.detailBox .detail_top .de_top_img image {
+  width: 110px;
+  height: 150px;
+  box-sizing: border-box;
+}
+
+.detailBox .de_top_content {
+  margin-left: 12.5px;
+}
+
+.detailBox .de_top_content .de_top_content_title {
+  font-size: 20px;
+  margin-top: 2px;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.detailBox .de_top_content .de_top_content_en {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.detailBox .de_top_content .de_top_content_score {
+  margin-top: 11px;
+}
+
+.detailBox .de_top_content .de_top_content_score span:nth-child(1) {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fc0;
+}
+
+.detailBox .de_top_content .de_top_content_type,
+.de_top_content_pubDesc {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.detailBox .detail_top .de_top_right {
+  line-height: 150px;
+  margin-left: 40px;
+}
+
+.detailBox .detail_narWrap {
+  width: 100%;
+  height: 40px;
+  z-index: 10;
+  background-color: #fff;
+  color: #777;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.detailBox .detail_narWrap .de_nar_tab {
+  display: flex;
+}
+
+.detailBox .detail_narWrap .de_nar_tab .de_nar_tab_item {
+  -webkit-box-flex: 1;
+  flex: 1;
+  text-align: center;
+  line-height: 40px;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 13px;
+  text-overflow: ellipsis;
+}
+
+.detailBox .detail_narWrap .de_nar_tab .de_nar_tab_item::before {
+  content: "";
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 1px;
+  background-color: #eee;
+}
+
+.detailBox .detail_narWrap .de_nar_tab .de_nar_tab_item span {
+  position: absolute;
+  top: 18px;
+  border: 4px solid transparent;
+  border-top-color: #b0b0b0;
+  margin-left: 4px;
+}
+
+.detailBox .detail_cinema {
+  color: #777;
+}
+
+.detailBox .detail_cinema .detail_cinema_item {
+  padding: 13px 15px 13px 0;
+  margin-left: 15px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.detailBox .detail_cinema .detail_cinema_item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+}
+.detailBox .detail_cinema .detail_cinema_item .de_ci_item_title {
+  font-size: 13px;
+}
+.detailBox .detail_cinema .detail_cinema_item .de_ci_item_title .title .price-block {
+  color: red;
+  padding-top: 9px;
+  padding-left: 13px;
+  font-size: 16px;
+}
+
+.detailBox .detail_cinema .detail_cinema_item .de_ci_item_title .box-flex {
+  margin: 6px 0;
+  font-size: 13px;
+  color: #666;
+  display: flex;
+}
+.detailBox .detail_cinema .detail_cinema_item .de_ci_item_title .box-flex span:nth-child(1) {
+  flex: 1;
+}
+.detailBox .detail_cinema .detail_cinema_item .de_ci_item_title .label-block {
+  height: 17px;
+  line-height: 17px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  font-size: 0;
+  flex-shrink: 0;
+}
+.detailBox .detail_cinema .detail_cinema_item .de_ci_item_title .label-block span {
+  position: relative;
+  display: inline-block;
+  padding: 0 3px;
+  height: 15px;
+  line-height: 15px;
+  border-radius: 2px;
+  font-size: .6rem;
+  color: #589daf;
+  border: 1px solid #589daf;
+  margin-right: 10px;
+}
+.detailBox .detail_cinema .detail_cinema_item .de_ci_item_title .discount-block image{
+  width: 15px;
+  height: 14px;
+  margin-right: 5px;
+} 
+.detailBox .detail_cinema .detail_cinema_item .de_ci_item_timeS {
+  font-size: 13px;
+  margin-top: 6px;
+}
+.detailBox .detail_cinema .detail_cinema_item .de_ci_item_timeS .min-show-block .time-line {
+  position: relative;
+  padding: 0 6px;
+}
+.detailBox .detail_cinema .detail_cinema_item .de_ci_item_timeS .min-show-block .time-line::before {
+  content: "";
+  height: 15px;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background-color: #e1e1e1;
+}

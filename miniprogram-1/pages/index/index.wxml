@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="usermotto">
+		<button type="primary" disabled="{{disabled}}" bindtap="start{{item}}"> {{sao}} </button>
+		<button type="primary" disabled="{{disabled}}" bindtap="onSearch" style="margin-top: 20rpx;" wx:if="{{result ==''}}"> 货架搜索 </button>
+	</view>
+	<view class="more" wx:if="{{result !=''}}">
+		<view>
+		  <span>
+				收件人信息
+			</span>	:	{{useInfo}}
+		</view>
+    <view>
+			<span>
+				物流单号
+			</span> : {{result}}
+		</view>
+  </view>
+	<view class="clear" wx:if="{{result !=''}}">
+		<button class="clear_btn" bindtap="onclear">清除记录</button>
+	</view>
+</view>

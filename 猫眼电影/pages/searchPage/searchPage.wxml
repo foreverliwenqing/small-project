@@ -1,0 +1,83 @@
+<!--pages/searchPage/searchPage.wxml-->
+<view>
+	<view class="searchHead">
+		<view class='search'>
+			<view class='searchItem'>
+				<text class='iconfont icon-sousuo'></text>
+				<input placeholder='搜电影、搜影院' bindinput="onInput" bindblur="onBlur" value="{{inputVal}}"></input>
+			</view>
+			<span bindtap="cancle">取消</span>
+		</view>
+		<view class="moveS" wx:if="{{searchMove.length}}">
+			<view class="classify">电影/电视剧/综艺</view>
+			<view class="listItem" wx:for="{{searchMove}}" wx:key="index">
+				<image class="proImg" src="{{item.img}}"></image>
+				<view class="move">
+					<view class="moveContent">
+						<view class="itemName">
+							<span class="moveTitle">{{item.nm}}</span>
+							<span class="imax">
+								<image src="../../assets/img/2d.png"></image>
+							</span>
+						</view>
+						<view>
+							<view class="start">主演:
+								<span>{{item.star}}</span>
+							</view>
+							<view class="moveType">
+								<span>{{item.rt}}</span>
+							</view>
+						</view>
+					</view>
+					<view class="button-block">
+						<view class="btn normal">
+							<span class="fix"><span class="grade">8.4</span> <span class="gradeTitle">分</span> </span>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="more-result" wx:if="{{moveNum > 3}}" bindtap="onMove">查看全部{{moveNum}}部影视剧</view>
+		</view>
+		<view style="background-color: #efeff4;height: 10px;width: 100%" wx:if="{{searchMove.length}}"></view>
+		<view class="cinames" wx:if="{{citySearch.length}}">
+			<view class="classify">影院</view>
+			<view class="cinamesList">
+				<view class="cinameItem" wx:for="{{citySearch}}" wx:key="index">
+					<view class="info">
+						<view class="namePrice">
+							<span class="addressName">
+								{{item.name}}
+							</span>
+							<span class="sell-price">
+								<span class="price">19.9</span>
+								元起
+							</span>
+						</view>
+						<view class="address">{{item.address}}</view>
+						<view class="feature-tags">
+							<span>{{item.districtName}}</span>
+							<span>{{item.cityName}}</span>
+							<span class="featrue">小吃</span>
+						</view>
+					</view>
+					<view class="distance">1.5km</view>
+				</view>
+			</view>
+			<view class="more-result" wx:if="{{cinamesNum > 2}}" bindtap="onCinema">查看全部{{cinamesNum}}家电影院</view>
+		</view>
+
+		<view class="search-history" wx:if="{{(!moveNum) && (!cinamesNum)}}">
+			<view class="history-item" wx:for="{{historyS}}" wx:key="index" bindtap="onHistory" data-item="{{item}}">
+				<text class="iconfont icon-shijian1"></text>
+				<span class="word one-line">{{item}}</span>
+				<text class="iconfont icon-cuowu" data-index="{{index}}" catchtap="onClose"></text>
+			</view>
+			<view class="clearHistory" bindtap="clearHis" wx-if="{{historyS.length}}">清除记录</view>
+		</view>
+
+		<view class="blank" wx-if="{{(!moveNum) && (!cinamesNum)}}">
+			<image src="../../assets/img/nodata.png"></image>
+			<span>搜索内容为空</span>
+		</view>
+	</view>
+</view>

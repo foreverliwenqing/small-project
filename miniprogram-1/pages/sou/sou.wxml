@@ -1,0 +1,43 @@
+<view>
+  <view class="searchBox">
+    <view class="inputbox">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindconfirm="onSearch" auto-focus bindinput="set" placeholder="产品中文名、货架号..." />
+          <button class="btn" bindtap="onSearch">搜索</button>
+        </view>
+      </view>
+    </view>
+    <view class="table">
+      <view class="tr">
+        <view class="th nor">
+          序号
+        </view>
+        <view class="th thname">
+          货架名称
+        </view>
+        <view class="th cnname">
+          产品中文名
+        </view>
+      </view>
+      <view class="tr" wx:for="{{datas}}" wx:key="index" id="{{ index % 2 == 0 ? 'active' : '' }}">
+        <view class="td nor">{{index + 1}}</view>
+        <view class="td name">{{item.shelf_location}}</view>
+        <view class="td cnname">{{item.waybill_desc}}</view>
+      </view>
+      
+      <view class="noData" wx:if="{{noDataFlag && datas.length > 0}}">
+        没有更多数据了...
+      </view>
+      <view class="clgif" wx:if="{{loadFlag && !noDataFlag}}">
+        <image src="../../assets/loading.gif"></image>
+      </view>
+      <block wx:if="{{ datas.length < 1 }}">
+        <view class="nodata">
+          <image class="nodata_img" src="../../assets/nodata.png"></image>
+          <text class="nodata_text">暂无记录</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

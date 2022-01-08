@@ -1,0 +1,156 @@
+<view class="movie-info-top">
+  <view class="movie-box">
+    <view class="movie-cover">
+      <image src="{{moveItem.img}}"></image>
+    </view>
+    <view class="movie-desc">
+      <view class="movie-desc-top">
+        <view class="movie-cn-name">
+          <h1>{{moveItem.nm}}</h1>
+        </view>
+        <view class="movie-en-name">The Eight Hundred</view>
+        <view class="movie-other-info">
+          <view class="movie-type">
+            <span class="movie-cat">{{moveItem.category}}</span>
+            <!-- <span>
+              <image src="../../assets/img/2d.png"></image>
+            </span> -->
+          </view>
+          <view class="acName">
+            <span>{{moveItem.star}}</span>
+          </view>
+          <view class="movie-show-time">
+            <span style="margin-right: 5px;">{{moveItem.rt}}</span>
+            <span>{{moveItem.showInfo}}</span>
+          </view>
+        </view>
+      </view>
+      <view class="button-sp-area">
+        <view class="button_btn">
+          <image src="../../assets/img/want-to-watch.png"></image>
+          <span>想看</span>
+        </view>
+
+        <view class="button_btn">
+          <image src="../../assets/img/star.png"></image>
+          <span>看过</span>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="real-time-word-of-mouth">
+    <view class="top">
+      <view class="left">
+        <image class="img noneBg" alt="logo" src="../../assets/img/logo.png" />
+        <span>实时口碑</span>
+      </view>
+      <view class="right">
+        <span class="num">518898</span>
+        <span>人想看</span>
+        <span class="num watched">1265471</span>
+        <span>人看过</span>
+      </view>
+    </view>
+    <view class="middle">
+      <view class="left">
+        <span class="score">9.2</span>
+        <span class="people-grade">
+          <span>1285765</span>
+          <span>人评</span>
+        </span>
+      </view>
+      <view class="right">
+        <view class="stars-percent-bar">
+          <view class="stars">
+            <image src="../../assets/img/star1.png"></image>
+            <image src="../../assets/img/star1.png"></image>
+            <image src="../../assets/img/star1.png"></image>
+            <image src="../../assets/img/star1.png"></image>
+            <image src="../../assets/img/star1.png"></image>
+          </view>
+          <view class="bar">
+            <view class="percent" style="width:85.1%"></view>
+          </view>
+          <view class="percent-value"><span>85.1</span><span>%</span></view>
+        </view>
+        <view class="stars-percent-bar">
+          <view class="stars">
+            <image src="../../assets/img/star1.png"></image>
+            <image src="../../assets/img/star1.png"></image>
+            <image src="../../assets/img/star1.png"></image>
+            <image src="../../assets/img/star1.png"></image>
+          </view>
+          <view class="bar">
+            <view class="percent" style="width:7.3%"></view>
+          </view>
+          <view class="percent-value"><span>7.3</span><span>%</span></view>
+        </view>
+        <view class="stars-percent-bar">
+          <view class="stars">
+            <image src="../../assets/img/star1.png"></image>
+            <image src="../../assets/img/star1.png"></image>
+            <image src="../../assets/img/star1.png"></image>
+          </view>
+          <view class="bar">
+            <view class="percent" style="width:2.8%"></view>
+          </view>
+          <view class="percent-value"><span>2.8</span><span>%</span></view>
+        </view>
+        <view class="stars-percent-bar">
+          <view class="stars">
+            <image src="../../assets/img/star1.png"></image>
+            <image src="../../assets/img/star1.png"></image>
+          </view>
+          <view class="bar">
+            <view class="percent" style="width:1.5%"></view>
+          </view>
+          <view class="percent-value"><span>1.5</span><span>%</span></view>
+        </view>
+        <view class="stars-percent-bar">
+          <view class="stars">
+            <image src="../../assets/img/star1.png"></image>
+          </view>
+          <view class="bar">
+            <view class="percent" style="width:3.4%"></view>
+          </view>
+          <view class="percent-value"><span>3.4</span><span>%</span></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="brief-introduction">
+    <view class="title">
+      <span>简介</span>
+      <view class="showIcon" bindtap="opaBtn" data-index="{{opaFlag}}">
+        <span>{{opaTitle}}</span>
+        <text class="iconfont icon-xia {{ opaFlag ? '' : 'iconUp' }}"></text>
+      </view>
+    </view>
+    <view class="content">
+      <p class="pCl {{ opaFlag ? 'line-clamp' : '' }}">
+        淞沪会战后期，中国军队第88师524团团附谢晋元临危受命，率领400余名官兵（外界称“八百壮士”），坚守闸北四行仓库，掩护主力部队撤退。“八百壮士”抱定为国捐躯的决心，以弹丸之地抗击侵略者，激战四昼夜，打退敌人十余次疯狂进攻。其战斗事迹之英勇，爱国气节之豪壮，振奋国人，震惊世界。
+      </p>
+    </view>
+  </view>
+  <view class="actors1">
+    <view class="title">
+      <span>演职人员</span>
+      <span>全部
+        <text class="iconfont icon-right"></text>
+      </span>
+
+    </view>
+    <view class="actor-list">
+      <ul>
+        <li wx:for="{{5}}" wx:key="index">
+          <image src="../../assets/img/active.png"></image>
+          <span>王千源</span>
+          <span>演员</span>
+        </li>
+      </ul>
+    </view>
+  </view>
+  <view class="can-buy">
+    <view class="buy-wrapper">特惠购票</view>
+  </view>
+</view>

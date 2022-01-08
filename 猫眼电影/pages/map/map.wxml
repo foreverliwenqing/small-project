@@ -1,0 +1,16 @@
+<!--pages/map/map.wxml-->
+<view class="" hover-class="none" hover-stop-propagation="false" style="width: 100%; height: 100%;">
+  <map id="map" longitude="{{longitude}}" latitude=" {{latitude}}" markers="{{markers}}" scale="13" show-location
+    style="width: 100%; height: 100%;"></map>
+  <view class="poi-info">
+    <view class="poi-title"><span class="poi-name">翠苑电影大世界</span><span class="poi-addr">西湖区文一路298号物美超市6楼（近万塘路）</span>
+      <view class="actTonav tonav">
+        <image src="../../assets/img/arrow_1.png" class="toImg"></image>
+      </view>
+    </view>
+    <view class="seachMore">
+      <text class="iconfont icon-sousuo"> </text>
+      <span>查看周边</span>
+    </view>
+  </view>
+</view>

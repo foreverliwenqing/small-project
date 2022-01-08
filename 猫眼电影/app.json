@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/cinemaS/cinema",
+    "pages/my/my",
+    "pages/city/city",
+    "pages/searchPage/searchPage",
+    "pages/moveInfo/moveInfo",
+    "pages/intrInfo/intrInfo",
+    "pages/moveItem/moveItem",
+    "pages/map/map",
+    "pages/movePlay/movePlay"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#dd403b",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor":"#da3949",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "./assets/img/mover.png",
+      "selectedIconPath": "./assets/img/moverac.png",
+      "text": "电影"
+    }, {
+      "pagePath": "pages/cinemaS/cinema",
+      "iconPath": "./assets/img/cinema.png",
+      "selectedIconPath": "./assets/img/cinemaac.png",
+      "text": "电影院"
+    }, {
+      "pagePath": "pages/my/my",
+      "iconPath": "./assets/img/my.png",
+      "selectedIconPath": "./assets/img/myac.png",
+      "text": "我的"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 100000
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

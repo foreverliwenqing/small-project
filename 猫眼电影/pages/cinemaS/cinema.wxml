@@ -1,0 +1,25 @@
+<view class="swiper-tab">
+  <view class="moveBox">
+    <view class="move_item" wx:for="{{moveS}}" wx:item="item" wx:key="index">
+      <view class="moveItem_marget">
+        <view class="coverImg" bindtap="onPlay" data-url="{{item.vId}}">
+          <image src="{{item.vImgurl}}" mode="widthFix" ></image>
+          <text class="iconfont icon-bofang"></text>
+        </view>
+        <p>{{item.vTitle}}</p>
+        <view class="list_bottom">
+          <view class="list_bottom_left">
+            <view class="list_bottom_avatar">
+              <image src="{{item.vHeadpic}}"></image>
+            </view>
+            <span>{{item.vName}}</span>
+          </view>
+          <view class="list_bottom_right">
+            <text class='iconfont icon-aixin'></text>
+            <span>{{item.vLike}} 万</span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

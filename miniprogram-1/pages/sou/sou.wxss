@@ -1,0 +1,83 @@
+/* pages/sou/sou.wxss */
+view {
+  box-sizing: border-box;
+}
+.inputbox {
+  padding: 10px;
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: white;
+}
+.weui-input {
+  width: 750px;
+  padding-right: 10rpx;
+}
+.weui-cell {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background: #f7f7f7;
+  z-index: 10;
+}
+.table {
+  overflow-y: scroll;
+  margin-top: 72px;
+  /* height: calc(100vh - 73px) */
+}
+.table .tr {
+  display: flex;
+}
+.table .tr .th {
+  background-color: #3366FF;
+  color: white;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table .tr .td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  line-height: 2.5;
+  padding: 10rpx;
+  text-align: center;
+}
+.btn {
+  background: #1AAD19;
+  color: white;
+  line-height: 1;
+  width: 94px;
+}
+.nor {
+  width: 20%
+}
+.name {
+  font-weight: bold;
+  width: 30%;
+}
+.thname {
+  width: 30%;
+}
+.cnname {
+  width: 50%;
+}
+#active {
+  background: snow;
+}
+.noData {
+  text-align: center;
+  color: #999;
+  line-height: 2;
+}
+.clgif {
+  display: flex;
+  justify-content: center;
+}
+.clgif image{
+  width: 100rpx;
+  height: 100rpx;
+}

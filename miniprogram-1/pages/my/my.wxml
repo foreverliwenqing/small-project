@@ -1,0 +1,9 @@
+<!--pages/my/my.wxml-->
+<view>
+  <view class="myContent">
+    <!-- <image class='background' src="../../assets/slide1.png" mode="aspectFill"></image> -->
+    <!-- <view class="headContent">
+        <view class="headTitle"></view>
+    </view> -->
+  </view>
+</view>

@@ -1,0 +1,23 @@
+/* pages/my/my.wxss */
+/* .myContent .background {
+  width: 100%;
+  height: 200px;
+  position:fixed; 
+  z-index: -1;
+}
+.headContent {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  align-items: center;
+}
+.headImg {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #acc0e6;
+  background-size: cover;
+}  */

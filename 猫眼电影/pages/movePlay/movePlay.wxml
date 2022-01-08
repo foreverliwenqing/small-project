@@ -1,0 +1,61 @@
+<!--pages/movePlay/movePlay.wxml-->
+<view>
+  <view class="videoBox">
+    <video id="myVideo" src="{{mObj.vVideourl}}" poster="{{mObj.vImgurl}}" binderror="videoErrorCallback"
+      danmu-list="{{danmuList}}" enable-danmu="{{false}}" danmu-btn show-center-play-btn='{{false}}'
+      show-play-btn="{{true}}" enable-play-gesture="{{true}}" controls picture-in-picture-mode="{{['push', 'pop']}}"
+      bindenterpictureinpicture='bindVideoEnterPictureInPicture'
+      bindleavepictureinpicture='bindVideoLeavePictureInPicture'></video>
+  </view>
+  <view class="funSort">
+    <span id="{{ tabIndex == 'intr' ? 'clspan' : '' }}" class="intr" bindtap="checkTab" data-index="intr" wx:if="{{inpDisabled}}">简介</span>
+    <span id="{{ tabIndex == 'comment' ? 'clspan' : '' }}" class="comment" bindtap="checkTab" data-index="comment" wx:if="{{inpDisabled}}">评论
+      <span>3</span> 
+    </span>
+    <view class="barrageBox" style=" width: {{ !inpDisabled ? 100 : 'auto' }}%;">
+      <view class="barrage cleee" style=" width: {{ !inpDisabled ? 60 : 'auto' }}%;">
+        <span class="barTitle">
+          <view class="weui-cells weui-cells_after-title" bindtap="onFocus">
+            <view class="weui-cell weui-cell_input">
+              <input class="weui-input" value="{{danmu}}" placeholder="{{placeHolder}}" bindfocus="onFocus" bindblur='onBlur' auto-focus="{{ !inpDisabled ? 'true' : '' }}"/>
+            </view>
+          </view>
+        </span>
+      </view>
+      <view class="btnBox" wx:if="{{ !inpDisabled }}">
+        <button class="mini-btn" type="primary" size="mini" form-type='reset' bindtap="bindSendDanmu">发送</button>
+        <button class="mini-btn" type="default" size="mini" bindtap="oncancel">取消</button>
+      </view>
+    </view>
+    <view class="blur"></view>
+  </view>
+  <view class="stream_item">
+    <view class="stream_left">
+      <image src="http://data.szmlkq.com/2019/05/20//1558341431401.jpg"></image>
+      <view class="streamTitle">
+        <view class="clTitle">爱吃肉的大仙w</view>
+        <view class="faseNum">6.7w粉丝</view>
+      </view>
+    </view>
+    <view class="streat_right">
+      <button class="mini-btn" type="primary" size="mini" style="background: #fa7298;">+关注</button>
+    </view>
+  </view>
+  <view class="stream_video_title" id="{{spread ? 'clspread' : ''}}">
+    <p>
+      毛蛋关于正畸-牙套妹的蜕变之路~个人整牙经历分享牙齿矫正必修课带牙套的必备知识,毛蛋关于正畸-牙套妹的蜕变之路~个人整牙经历分享牙齿矫正必修课带牙套的必备知识
+    </p>
+    <span>
+      <text class="iconXia iconfont icon-xia" bindtap="onopenTitle"></text>
+    </span>
+  </view>
+  <view class="wx_line"></view>
+  <view class="comment_box">
+    <view class="hot_com">
+      热门评论 (3)
+    </view>
+    <view class="show_More">
+      查看更多评论
+    </view>
+  </view>
+</view>

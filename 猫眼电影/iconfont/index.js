@@ -1,0 +1,6 @@
+
+Component({
+  properties: {
+    icon: String,
+  },
+})

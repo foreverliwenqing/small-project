@@ -1,0 +1,37 @@
+<!--pages/city/city.wxml-->
+<view class="cityContent">
+	<view class="inputOnfocus">
+		<view class="weui-cells weui-cells_after-title">
+			<input class="weui-input" auto-focus placeholder="中文/拼音/首字母" bindinput="getCode" />
+		</view>
+	</view>
+	<view class="localCity">
+		<view class="localBox">
+			<span>当前: </span>
+			<span class="cityName">{{localCity}}</span>
+		</view>
+		<view class="allCitys" wx:if="{{!searchFlag}}">
+			<scroll-view scroll-y="true" scroll-with-animation="true" class="scrollBox" bindscroll="scrollTop" scroll-into-view="{{toView}}">
+				<view class="allTitle">
+					所有城市
+				</view>
+				<view class="cityS" wx:for="{{ citySList }}" wx:key="index" id="{{item.head}}">
+					<view class="prefix" style="font-variant:small-caps" data-scroll :href="item.head">{{item.head}}</view>
+					<view class="cityItem" wx:for="{{ item.cityNameS }}" wx:key="idx" bindtap="onItem" data-item="{{item}}">{{item}}</view>
+				</view>
+			</scroll-view>
+		</view>
+		<!-- 定义搜索城市 -->
+		<view class="searchBox" wx:else>
+			<view>
+				<view class="cityItem" wx:for="{{ searchValS }}" bindtap="onItemTw" data-item="{{item.name}}">{{item.name}}</view>
+			</view>
+		</view>
+		<!-- 城市首字母展示 -->
+		<view class="pix">
+			<view wx:for="{{ citySList }}" wx:key="key" current="{{currentTab}}" class="pixStr {{ index == idxCity ? 'active': '' }}" bindtap="clickScroll" :href="item.head" data-scroll data-id="{{item.head}}" data-index="{{index}}">
+				{{ item.head }}
+			</view>
+		</view>
+	</view>
+</view>

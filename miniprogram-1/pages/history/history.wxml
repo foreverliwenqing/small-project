@@ -1,0 +1,42 @@
+<!--pages/history/history.wxml-->
+<view class="container log-list">
+	<view class="searchBox">
+		<view class="weui-cell weui-cell_input">
+			<input value="{{value}}" bindinput="onInput" class="weui-input" auto-focus placeholder="输入编号..." />
+			<button class="btn" bindtap="onChoice">搜索</button>
+		</view>
+	</view>
+	<view class="seat"></view>
+	<view class="table">
+		<view class="tr bg-w">
+			<view class="th xuhao">序列</view>
+			<view class="th eclipce">编号</view>
+			<view class="th tdLast">时间</view>
+		</view>
+		<block wx:for="{{historyS}}" wx:key="index" wx:if="{{ historyS.length }}">
+			<view class="tr bg-w" wx:if="{{index % 2 == 0}}">
+				<view class="td xuhao">{{index + 1}}</view>
+				<view class="td eclipce" :title="item.num">{{item.num}}</view>
+				<view class="td tdLast">{{item.util}}</view>
+			</view>
+			<view class="tr bg-g" wx:else>
+				<view class="td xuhao">{{index + 1}}</view>
+				<view class="td eclipce" :title="item.num">{{item.num}}</view>
+				<view class="td tdLast">{{item.util}}</view>
+			</view>
+		</block>
+		<block wx:if="{{ historyS.length < 1 }}">
+			<view class="nodata">
+				<image class="nodata_img" src="../../assets/nodata.png"></image>
+				<text class="nodata_text">暂无记录</text>
+			</view>
+		</block>
+	</view>
+	<modal title="提示" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" bindconfirm="clearLog" bindcancel="switchModal">
+		是否清除记录？此操作不可恢复!
+	</modal>
+
+	<view class="clear" wx:if="{{ historyS.length }}">
+		<button class="clear_btn" bindtap="onclear">清除记录</button>
+	</view>
+</view>

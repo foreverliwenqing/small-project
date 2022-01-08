@@ -1,0 +1,69 @@
+/* pages/city/city.wxss */
+.cityContent .inputOnfocus{
+  height: 30px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.weui-cells {
+    background: white;
+    border-radius: 20px;
+    height: 100%;
+    width: 80%;
+}
+.weui-input {
+  text-align: center;
+  line-height: 100%;
+  height: 100%
+}
+.localBox, .cityItem {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+.localCity {
+  margin-top: 40px;
+}
+.cityName {
+  font-weight: bold;
+  transition: all 1s;
+}
+.allTitle { 
+  padding: 15px;
+}
+.prefix {
+  padding: 10px;
+  background: #eee;
+  font-weight: bold;
+  font-size: 20px;
+}
+.searchBox {
+  background: white;
+  width: 100%;
+  height: calc(100vh - 100px);
+  position: absolute;
+  bottom: 0;
+  overflow: auto;
+}
+.pix {
+  position: fixed;
+  right: 6px;
+  top: 150rpx;
+  line-height: 1.15;
+}
+.pixStr {
+  font-variant: small-caps;
+}
+.active {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+}
+.scrollBox {
+  height: calc(100vh - 96px)
+}

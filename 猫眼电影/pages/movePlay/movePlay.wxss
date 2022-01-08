@@ -1,0 +1,122 @@
+/* pages/movePlay/movePlay.wxss */
+.videoBox {
+}
+video {
+  width: 100%;
+  display: block;
+}
+.funSort {
+  display: flex;
+  align-items: center;
+  color: #696868;
+  box-shadow: 10rpx rebeccapurple;
+  padding: 12rpx 0;
+  position: relative;
+}
+.weui-cells .weui-input{
+  height: 100%;
+}
+
+.intr, .comment {
+  margin-left: 45px;
+  line-height: 2.5;
+}
+.comment {
+  margin-right: 45px;
+}
+.funSort #clspan {
+  border-bottom: 4rpx solid #fa7298;
+  color: #fa7298;
+}
+.stream_item {
+  font-size: 30rpx;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid rgb(230, 230, 230);
+}
+.stream_video_title {
+  padding: 22rpx;
+  display: flex;
+  line-height: 2.2;
+}
+p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  height: 70rpx;
+}
+.iconXia {
+  color: #999;
+  padding: 0 10rpx;
+}
+#clspread p{
+  display: block !important;
+  transition: height .3s;
+  height: auto;
+}
+#clspread .iconXia {
+  transform: rotate(180deg);
+  transition: transform .1s,-webkit-transform .1s;
+}
+.clTitle {
+  font-weight: bold;
+  opacity: .7;
+}
+.faseNum {
+  font-size: 26rpx;
+  color: #555;
+}
+.stream_item .stream_left, .stream_item .stream_right {
+  display: flex;
+  align-items: center;
+}
+.stream_item .stream_left image{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.barrage {
+  width: 240rpx;
+  height: 80rpx;
+  border: 1px solid #e7e7e7;
+  border-radius: 100rpx;
+  line-height: 80rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  display: flex;
+  overflow: hidden;
+}
+.barTitle {
+  display: inline-block;
+  width: 100%;
+}
+.barFlag {
+  flex: 1;
+  background-color: #fff;
+  text-align: center;
+}
+.barFlag text {
+  font-size: 28px;  
+}
+.weui-cells, .weui-cell{
+  height: 100%;
+}
+.barrageBox {
+  display: flex;
+  align-items: center;
+}
+.comment_box {
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx;
+}
+.hot_com {
+  font-weight: bold;
+}
+.show_More {
+  color: #f79e1c;
+}

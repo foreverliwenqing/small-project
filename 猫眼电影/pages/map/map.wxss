@@ -1,0 +1,57 @@
+/* pages/map/map.wxss */
+page{
+  height: 100%;
+}
+map {
+  height: calc(100vh - 120px) !important;
+}
+.poi-info {
+  z-index: 1000001;
+  background: #ffffff;
+}
+.poi-info .poi-title {
+  width: 100%;
+  padding: 19px 16px 17px 18px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 0 solid rgba(0,0,0,0.10);
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.15);
+}
+.poi-info .poi-name {
+  font-size: 17px;
+  color: #111111;
+  display: block;
+  margin-right: 70px;
+  word-wrap: break-word;
+}
+.poi-info .poi-addr {
+  font-size: 13px;
+  color: #666666;
+  display: block;
+  margin-top: 4px;
+  margin-right: 70px;
+  word-wrap: break-word;
+}
+.poi-info .tonav {
+  display: block;
+  position: absolute;
+  margin-top: -52.5px;
+  right: 16px;
+  border-radius: 60px;
+  overflow: hidden;
+  border-bottom: 1px solid #e1e1e1;
+}
+.toImg {
+  width: 60px;
+  height: 60px;
+}
+.seachMore {
+  padding: 11px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.seachMore span {
+  margin-left: 10px;
+}

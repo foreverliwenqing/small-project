@@ -1,0 +1,12 @@
+/* pages/swiper/swiper.wxss */
+swiper {
+  height: 210px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+swiper-item {
+  border-radius:  20px;
+}
+.swiper image {
+  width: 100vw;
+}
